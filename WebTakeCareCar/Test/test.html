@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Thanh menu có thể mở ra đóng vào</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Phần định dạng css cho thanh menu */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: -300px;
+      height: 100%;
+      background-color: #333;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      border-bottom: 1px solid #444;
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+    }
+
+    .menu a:hover {
+      background-color: #1abc9c;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #333;
+      border: 3px solid #1abc9c;
+      border-radius: 50%;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .toggle.active {
+      background-color: #1abc9c;
+    }
+
+    .toggle.active:before {
+      content: "\2716";
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 0;
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      display: none;
+    }
+
+    .toggle.active .close-icon {
+      display: block;
+    }
+
+    .toggle.active span {
+      display: none;
+    }
+
+    /* Phần định dạng css cho slider */
+    .slider {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide .caption {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+}
+
+.slide .caption h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.slide .caption p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.slide .caption .button {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.controls {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: gray;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- <div class="toggle"><span>&#9776;</span><span class="close-icon">&times;</span></div>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Giới thiệu</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+  <script>
+    // Phần viết javascript để xử lý sự kiện mở đóng thanh menu
+    var toggle = document.querySelector(".toggle");
+    var menu = document.getElementById("menu");
+    var closeIcon = document.querySelector(".close-icon");
+
+    toggle.onclick = function() {
+      toggle.classList.toggle("active");
+      if (toggle.classList.contains("active")) {
+        menu.style.left = "0";
+        toggle.style.display = "none";
+      }
+    }
+
+    closeIcon.onclick = function() {
+      toggle.classList.remove("active");
+      menu.style.left = "-300px";
+    }
+  </script> -->
+
+  <!-- slider -->
+  <div class="slider">
+    <div class="slide" id="slide-1">
+      <img src="../assets/images/car1.jpg" alt="Car 1">
+      <div class="caption">
+        <h3>Chăm sóc xe ô tô chuyên nghiệp</h3>
+        <p>Chúng tôi cung cấp các dịch vụ chăm sóc xe ô tô chất lượng cao, từ rửa xe, bảo dưỡng, sửa chữa đến độ xe theo yêu cầu.</p>
+        <a href="#" class="button">Xem thêm</a>
+      </div>
+    </div>
+    <div class="slide" id="slide-2">
+      <img src="../assets/images/car1.jpg" alt="Car 2">
+      <div class="caption">
+        <h3>Đa dạng các loại xe ô tô</h3>
+        <p>Chúng tôi có nhiều loại xe ô tô để bạn lựa chọn, từ xe hơi, xe tải, xe khách đến xe thể thao, xe sang trọng, xe cổ điển.</p>
+        <a href="#" class="button">Xem thêm</a>
+      </div>
+    </div>
+    <div class="slide" id="slide-3">
+      <img src="../assets/images/car1.jpg" alt="Car 3">
+      <div class="caption">
+        <h3>Giá cả hợp lý và ưu đãi</h3>
+        <p>Chúng tôi luôn cập nhật giá cả cạnh tranh và có nhiều chương trình ưu đãi hấp dẫn cho khách hàng thân thiết và mới.</p>
+        <a href="#" class="button">Xem thêm</a>
+      </div>
+    </div>
+    <div class="slide" id="slide-4">
+      <img src="../assets/images/car1.jpg" alt="Car 4">
+      <div class="caption">
+        <h3>Tư vấn và hỗ trợ tận tình</h3>
+        <p>Chúng tôi có đội ngũ nhân viên tư vấn và hỗ trợ nhiệt tình, sẵn sàng giải đáp mọi thắc mắc và yêu cầu của bạn.</p>
+        <a href="#" class="button">Xem thêm</a>
+      </div>
+    </div>
+    <div class="controls">
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
+      <span class="dot" onclick="showSlide(3)"></span>
+      <span class="dot" onclick="showSlide(4)"></span>
+    </div>
+  </div>
+
+
+
+  <script>
+    let slideIndex = 1;
+showSlide(slideIndex);
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = 0;
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.opacity = 1;
+  dots[slideIndex - 1].className += " active";
+}
+
+function nextSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+setInterval(function() {
+  nextSlide(1);
+}, 3000);
+  </script>
+</body>
+</html>

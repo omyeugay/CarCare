@@ -1,0 +1,39 @@
+.aboutUs {
+    margin: 20px auto;
+    width: 70%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.aboutUs__content__heading {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.aboutUs__content__title {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutUs__content__text {
+    /* flex: 70%; */
+    margin-right: 30px;
+    flex: 1;
+    font-size: 16px;
+}
+
+.aboutUs__content__img {
+    flex: 10%;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}

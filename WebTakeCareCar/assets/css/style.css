@@ -1,0 +1,181 @@
+/* Thêm màu nền đen cho navbar */
+/* Phần định dạng css cho trang web */
+:root {
+  --main-color: #1abc9c;
+
+  --main-background-color: rgb(15, 173, 141)
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+hr.-content {
+  width: 64px;
+  line-height: 10px;
+    background-color: #1abc9c;
+    color: #1abc9c;
+    height: 1px;
+    float: left;
+    margin-top:15px;
+    margin-right: 18px;
+    margin-left: 0;
+}
+
+
+.see {
+  width: 150px;
+  height:54px;
+  background-color: #1abc9c;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 54px;
+  margin-top: 6px;
+}
+
+.see:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+/* Main */
+.main-introduce {
+  display: flex;
+  margin: 20px;
+  padding-left: 200px;
+}
+
+.content {
+  flex: 60%;
+  padding:20px 100px 20px 0px;
+
+}
+
+.bgr-introduce {
+  flex: 40%;
+  width: 600px;
+  height: 300px;
+  padding: 100px 200px 100px 100px;
+  background-image: url("../images/introduce.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main decr */
+.decr-list {
+  display: flex;
+  margin: 20px;
+  padding-left: 200px;
+  padding-right: 100px;
+
+}
+
+.decr-item {
+  flex: 33,3%;
+  padding:12px;
+}
+
+.decr-item-img {
+  width: 50px;
+  height: 50px;
+}
+
+.decr-item-img-chemistry, .decr-item-img-repair, .decr-item-img-carcare {
+  width: 50px;
+  height: 50px;
+}
+/* End decr */
+
+/* End Main */
+
+/* footer */
+.footer {
+  text-align: center;
+  background: var(--main-color);
+  padding: 0 200px;
+
+}
+
+.footer-inf {
+  display: flex;
+  width: 100%;
+  
+}
+
+.footer-inf-company {
+  display: flex;
+  flex-direction: column;
+  width:33.3%;
+  /* background-color: red; */
+  padding: 12px;
+}
+
+.footer-inf-company__img {
+  float: left;
+  width:260px;
+  height:150px;
+}
+
+.footer-inf-company__address {
+  text-align: left;
+  color: #fff;
+}
+
+.footer-inf-company__contact {
+  text-align: left;
+  color: #fff;
+}
+
+.footer-inf-company__contact p {
+  padding: 6px;
+}
+
+
+.footer-inf-all {
+ width: 66.6%;
+
+}
+
+.footer-inf-all-list {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.footer-inf-all-item {
+  width: 33.3%;
+  margin: 16px;
+}
+
+.footer-inf-all-item__heading {
+  text-align:left;
+}
+
+.footer-inf-all-item ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.footer-inf-all-item ul li {
+  border-bottom: 1px solid #fff;
+}
+
+.footer-inf-all-item ul li a {
+  padding: 20px 0 20px 12px;
+
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.footer-inf-all-item ul li a:hover {
+  opacity: 0.8;
+  color: #ccc;
+  background-color: var(--main-background-color);
+}

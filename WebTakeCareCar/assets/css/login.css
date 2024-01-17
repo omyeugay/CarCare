@@ -1,0 +1,189 @@
+.users_join {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.users_join__icon {
+    position: relative;
+    display: none;
+    font-size:20px ;
+    padding: 10px;
+}
+
+.users_join__icon:hover .user__information {
+    display: block;
+}
+
+.user__information {
+    display: none;
+    background-color: #ccc;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    bottom: -550%;
+}
+
+.user__information__select {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.user__information__select-link {
+    display: block;
+    text-decoration: none; 
+    color: black;
+}
+
+/* The Modal (background) */
+.login-form {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.login-form form {
+    background-color: #fefefe;
+    margin: 100px auto; /* 15% from the top and centered */
+    padding: 50px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.login-form input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-form a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* The Modal (background) */
+.form {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.form form {
+    background-color: #fefefe;
+    margin: 100px auto; /* 15% from the top and centered */
+    padding: 50px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.forLogin {
+    margin-top: 20px;
+    text-align: right;
+    text-decoration: none;
+    color: #007BFF;
+
+}
+
+.forLogin:hover {
+    text-decoration: underline;
+}
+
+#dangnhap {
+    background-color: #007BFF;
+}   
